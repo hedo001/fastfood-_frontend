@@ -1,0 +1,75 @@
+@import "../../app/styles/variable.scss";
+.cont {
+  display: flex;
+  justify-content: space-between;
+}
+.header {
+  padding: 13px 0 14px 0;
+  margin-bottom: 12px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 32px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.locationIcon {
+  display: flex;
+  align-items: center;
+  max-width: 36px;
+  padding: 7px;
+  border-radius: 155px;
+  background: $button__color;
+}
+.links {
+  font-size: 14px;
+}
+.links a {
+  color: $main__color__blue;
+  font-size: 13px;
+}
+.headerLeftButtons {
+  display: flex;
+}
+.cartIcon {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  border-radius: 155px;
+  background-color: $button__color;
+}
+
+.enterBtn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 155px;
+  opacity: 0.7;
+  appearance: none;
+  background-color: $button__color;
+  color: $main__color__blue;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 24px;
+}

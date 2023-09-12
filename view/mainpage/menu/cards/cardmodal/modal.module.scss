@@ -1,0 +1,95 @@
+.wrp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.modal {
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.left {
+  width: 311px;
+  height: 452px;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  padding: 20px 24px 28px;
+  width: 100%;
+  position: relative;
+}
+.rightHeader h3 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.326px;
+  margin-bottom: 12px;
+}
+.rightHeader p {
+  color: #303940;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.154px;
+  margin-bottom: 20px;
+}
+.radio {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  border: 1px solid #dde2e4;
+  padding: 12px;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+.radio h3 {
+  color: #1a2024;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.154px;
+  margin-bottom: 12px;
+}
+.price {
+  // display: inline-block;
+  // margin-left: 50px;
+  position: absolute;
+  right: 0px;
+}
+.chakra-checkbox {
+  padding: 0;
+}
+.exit {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+.modalButton {
+  display: flex;
+  justify-content: space-between;
+}
+.addButton {
+  padding: 12px 24px;
+  border-radius: 20px;
+  background: #5982e7;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.154px;
+}

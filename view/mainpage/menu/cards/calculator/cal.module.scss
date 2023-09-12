@@ -1,0 +1,22 @@
+.calculator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: 1px solid #b0c7ff;
+}
+.calculator span {
+  display: inline-block;
+  text-align: center;
+  width: 25px;
+}
+.addbutton {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+}
