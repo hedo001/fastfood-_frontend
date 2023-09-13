@@ -1,12 +1,10 @@
-"use client";
-import stl from "./selector.module.scss";
+import { useEffect, useRef, useState } from "react";
+import stl from "./others.module.scss";
+import Image from "next/image";
 import { Selectarrow } from "../../icons/selectarrow";
 import { Selected } from "../../icons/selected";
 
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-
-const Selector = () => {
+const Others = () => {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("");
   let ref = useRef();
@@ -18,21 +16,20 @@ const Selector = () => {
   });
 
   return (
-    <div ref={ref} className={stl.selector}>
+    <div ref={ref} className={stl.others}>
       <div onClick={() => setOpen(!open)} className={stl.header}>
-        {/* <Image className={stl.russianIcon} src={rus} alt="flag" /> */}
-        <Selectarrow />
+        <p>Еще</p>
       </div>
 
       {open && (
-        <div className={stl.selectorOpt}>
+        <div className={stl.othersOpt}>
           <div
             onClick={() => setSelected("uz")}
             className={
               selected == "uz" ? `${stl.selected} ${stl.option}` : stl.option
             }
           >
-            O'zbekcha
+            Лаваш
             {selected === "uz" && <Selected />}
           </div>
           <div
@@ -41,7 +38,7 @@ const Selector = () => {
               selected == "rus" ? `${stl.selected} ${stl.option}` : stl.option
             }
           >
-            Русский
+            Бургеры
             {selected === "rus" && <Selected />}
           </div>
           <div
@@ -50,8 +47,17 @@ const Selector = () => {
               selected == "eng" ? `${stl.selected} ${stl.option}` : stl.option
             }
           >
-            English
+            Клаб-Сэндвич
             {selected === "eng" && <Selected />}
+          </div>
+          <div
+            onClick={() => setSelected("shour")}
+            className={
+              selected == "shour" ? `${stl.selected} ${stl.option}` : stl.option
+            }
+          >
+            Шаурма
+            {selected === "shour" && <Selected />}
           </div>
         </div>
       )}
@@ -59,4 +65,4 @@ const Selector = () => {
   );
 };
 
-export default Selector;
+export default Others;

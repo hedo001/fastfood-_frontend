@@ -1,0 +1,35 @@
+.others {
+  position: relative;
+}
+.header p {
+  user-select: none;
+  cursor: pointer;
+}
+.othersOpt {
+  padding: 16px;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  z-index: 5;
+  border-radius: 12px;
+  background: #fff;
+  width: 232px;
+  box-shadow: 0px -1px 20px -2px rgba(34, 60, 80, 0.2);
+  padding: 16px;
+}
+.option {
+  color: #292929;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 16px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.selected {
+  font-weight: 500;
+}
+.selected svg {
+  position: absolute;
+  right: 16px;
+}

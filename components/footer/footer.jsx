@@ -1,9 +1,8 @@
-import logo from "../../view/images/svg/LOGO.svg";
-import Image from "next/image";
-import instagram from "./icons/instagram.svg";
-import telegram from "./icons/telegram.svg";
-import facebook from "./icons/facebook.svg";
 import Link from "next/link";
+import { Logo } from "../icons/logo";
+import { Inst } from "../icons/inst";
+import { Facebook } from "../icons/facebook";
+import { Teleg } from "../icons/teleg";
 import "./footerstyle.scss";
 const Footer = () => {
   return (
@@ -11,7 +10,7 @@ const Footer = () => {
       <div className="footer__cont">
         <div className="footer__header">
           <Link href="/">
-            <Image src={logo} alt="logo" />
+            <Logo />
           </Link>
           <ul className="footer__list">
             <li>
@@ -31,22 +30,17 @@ const Footer = () => {
             <ul className="footer__bottom__list">
               <li>
                 <a href="#">
-                  <Image
-                    width={24}
-                    height={24}
-                    src={instagram}
-                    alt="instagram"
-                  />
+                  <Inst />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <Image width={24} height={24} src={facebook} alt="facebook" />
+                  <Facebook />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <Image width={24} height={24} src={telegram} alt="telegram" />
+                  <Teleg />
                 </a>
               </li>
             </ul>

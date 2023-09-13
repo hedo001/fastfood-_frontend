@@ -1,9 +1,7 @@
-import Main from "../view/mainpage/main/main";
+"use client";
+
+import Main from "../view/main/main";
 
 export default function Home() {
-  return (
- 
-      <Main />
-    
-  );
+  return <Main />;
 }
