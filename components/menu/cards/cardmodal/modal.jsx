@@ -1,6 +1,8 @@
 import Image from "next/image";
-import { Calculator } from "../calculator/cal";
+import { Plus } from "../../../icons/plus";
+import { Minus } from "../../../icons/minus";
 import stl from "./modal.module.scss";
+import ctl from "../calculator/cal.module.scss";
 import { Exit } from "../../../icons/exit";
 import { Radio, Stack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
@@ -90,10 +92,16 @@ export const MyModal = ({ setModal, data, open }) => {
         properties,
         quantity: num,
         data,
-        price: calculateProductPrice * num,
+        price: calculateProductPrice,
         productId: new Date().valueOf(),
       })
     );
+  };
+  const increment = () => {
+    return setNum((prev) => prev + 1);
+  };
+  const decrement = () => {
+    num - 1 < 1 ? setNum(1) : setNum((prev) => prev - 1);
   };
   return (
     <ChakraProvider>
@@ -146,7 +154,21 @@ export const MyModal = ({ setModal, data, open }) => {
             ))}
 
             <div className={stl.modalButton}>
-              <Calculator num={num} setNum={setNum} />
+              <div className={ctl.calculator}>
+                <button
+                  className={ctl.addbutton}
+                  onClick={() => decrement(num)}
+                >
+                  <Minus />
+                </button>
+                <span>{num}</span>
+                <button
+                  className={ctl.addbutton}
+                  onClick={() => increment(num)}
+                >
+                  <Plus />
+                </button>
+              </div>
               <button onClick={handelClick} className={stl.addButton}>
                 Добавить {(calculateProductPrice * num).toLocaleString("cs-CZ")}
                 сум

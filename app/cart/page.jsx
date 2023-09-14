@@ -6,10 +6,17 @@ import { CartProducts } from "./cartProducts";
 
 const Mycart = () => {
   const [num, setNum] = useState(0);
-  const products = useSelector((state) => state.products.products);
+  const products = useSelector((state) => state.cart.products);
+
   useEffect(() => {
-    products?.map((el) => setNum((prev) => prev + el.price));
-  }, []);
+    let totalSum = products?.reduce(
+      (total, number) => total + number.price * number.quantity,
+      0
+    );
+    setNum(totalSum);
+    !products?.length && setNum(0);
+  }, [products]);
+
   return (
     <section className={stl.cart}>
       <div className={stl.header}>

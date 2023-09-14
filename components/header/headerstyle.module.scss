@@ -59,8 +59,24 @@
   margin-right: 12px;
   border-radius: 155px;
   background-color: $button__color;
+  position: relative;
 }
-
+.cartTotal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -8px;
+  right: -5px;
+  padding: 4px;
+  background-color: rgb(250, 116, 116);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .enterBtn {
   padding: 8px 18px;
   border: none;

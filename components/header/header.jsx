@@ -1,12 +1,15 @@
-import React from "react";
+"use client";
 import Link from "next/link";
 import { Logo } from "../icons/logo";
 import { Location } from "../icons/location";
 import stl from "./headerstyle.module.scss";
 import Selector from "./selector/selector";
 import { CartIcon } from "../icons";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const totalPurchase = useSelector((store) => store.cart.products);
+
   return (
     <header className={stl.header}>
       <div className={stl.cont}>
@@ -41,6 +44,9 @@ const Header = () => {
           </div>
           <div className={stl.headerLeftButtons}>
             <Link href="/cart" className={stl.cartIcon}>
+              {totalPurchase?.length ? (
+                <span className={stl.cartTotal}>{totalPurchase.length}</span>
+              ) : null}
               <CartIcon />
             </Link>
 

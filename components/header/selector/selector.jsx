@@ -2,6 +2,7 @@
 import stl from "./selector.module.scss";
 import { Selectarrow } from "../../icons/selectarrow";
 import { Selected } from "../../icons/selected";
+import { Rus } from "../../icons/rus";
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -20,7 +21,7 @@ const Selector = () => {
   return (
     <div ref={ref} className={stl.selector}>
       <div onClick={() => setOpen(!open)} className={stl.header}>
-        {/* <Image className={stl.russianIcon} src={rus} alt="flag" /> */}
+        <Rus />
         <Selectarrow />
       </div>
 

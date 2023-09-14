@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 // import { log } from "console";
 
-export const counterSlice = createSlice({
+export const ProcuctSlice = createSlice({
   name: "cart",
   initialState: {
     products: [],
@@ -43,5 +43,5 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { addToCart, updateCart } = counterSlice.actions;
-export default counterSlice.reducer;
+export const { addToCart, updateCart } = ProcuctSlice.actions;
+export default ProcuctSlice.reducer;
