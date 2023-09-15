@@ -10,8 +10,9 @@ import { Checkbox } from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/components/store/slices/products";
+import { toast } from "react-toastify";
 
-export const MyModal = ({ setModal, data, open, setAlert }) => {
+export const MyModal = ({ setModal, data, open }) => {
   const [num, setNum] = useState(1);
 
   const [properties, setProperties] = useState([]);
@@ -87,7 +88,7 @@ export const MyModal = ({ setModal, data, open, setAlert }) => {
 
   const handelClick = () => {
     setModal(false);
-    setAlert(true);
+    toast("Product added to cart");
     dispatch(
       addToCart({
         properties,

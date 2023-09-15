@@ -4,9 +4,9 @@ import { Input } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { editProfile } from "../../store/slices/profile";
 import { useEffect } from "react";
-import { Inter } from "next/font/google";
+import { toast } from "react-toastify";
 
-export const ProfileEdit = ({ close, setAlert }) => {
+export const ProfileEdit = ({ close }) => {
   const { register, handleSubmit, reset } = useForm();
   const defaultInfo = useSelector((store) => store.profile);
   console.log(defaultInfo);
@@ -15,8 +15,8 @@ export const ProfileEdit = ({ close, setAlert }) => {
   useEffect(() => reset(defaultInfo), []);
 
   const submit = (data) => {
+    toast("Your profile updated succesfully");
     dispatch(editProfile({ ...data }));
-    setAlert(true);
     close(false);
   };
   return (
