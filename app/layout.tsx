@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import Footer from "../components/footer/footer";
 import Providers from "../components/store/provider";
 import Header from "@/components/header/header";
-const inter = Inter({ subsets: ["latin"] });
+const popins = Inter({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "FastFood",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={popins.className}>
         <div className="cont">
           <Providers>
             <Header />
