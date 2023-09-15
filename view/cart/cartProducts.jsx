@@ -5,7 +5,6 @@ import stl from "./cart.module.scss";
 export const CartProducts = ({ products }) => {
   return (
     <>
-      {console.log(products)}
       {products?.map((el, i) => (
         <li className={stl.product} key={i}>
           <div className={stl.img}>

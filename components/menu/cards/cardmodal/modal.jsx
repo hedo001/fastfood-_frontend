@@ -8,10 +8,10 @@ import { Radio, Stack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Checkbox } from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "@/components/store/slices/products";
 
-export const MyModal = ({ setModal, data, open }) => {
+export const MyModal = ({ setModal, data, open, setAlert }) => {
   const [num, setNum] = useState(1);
 
   const [properties, setProperties] = useState([]);
@@ -87,6 +87,7 @@ export const MyModal = ({ setModal, data, open }) => {
 
   const handelClick = () => {
     setModal(false);
+    setAlert(true);
     dispatch(
       addToCart({
         properties,

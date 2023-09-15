@@ -1,0 +1,45 @@
+.infoCard {
+  width: 61%;
+  padding: 22px 24px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.04);
+}
+.infoCard h2 {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 18px;
+}
+.infoCard p {
+  color: #000;
+  font-weight: 500;
+}
+.infoCard span {
+  color: #8d8488;
+  font-size: 14px;
+  font-weight: 500;
+}
+.infoContent {
+  display: flex;
+  gap: 142px;
+  margin-top: 18px;
+  margin-bottom: 45px;
+}
+.editbtn {
+  border: 0;
+  color: #5982e7;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 25px 0 0 0;
+  border-top: 1px solid #e5e9eb;
+}

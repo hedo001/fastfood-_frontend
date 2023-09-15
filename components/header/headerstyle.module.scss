@@ -53,7 +53,7 @@
   display: flex;
 }
 .cartIcon {
-  padding: 8px 10px;
+  padding: 8px 12px;
   display: flex;
   align-items: center;
   margin-right: 12px;
@@ -78,14 +78,10 @@
   justify-content: center;
 }
 .enterBtn {
-  padding: 8px 18px;
+  padding: 8px 10px;
   border: none;
   border-radius: 155px;
   opacity: 0.7;
   appearance: none;
   background-color: $button__color;
-  color: $main__color__blue;
-  cursor: pointer;
-  font-weight: 600;
-  line-height: 24px;
 }

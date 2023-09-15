@@ -3,9 +3,8 @@ import stl from "../menustyle.module.scss";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { MyModal } from "./cardmodal/modal";
-// import { Calculator } from "./calculator/cal";
 
-const Cards = () => {
+const Cards = ({ setAlert }) => {
   const [modal, setModal] = useState(false);
   const [mydata, setMyData] = useState(false);
 
@@ -55,7 +54,14 @@ const Cards = () => {
         </div>
       ))}
 
-      {modal && <MyModal setModal={setModal} data={mydata} open={modal} />}
+      {modal && (
+        <MyModal
+          setModal={setModal}
+          data={mydata}
+          open={modal}
+          setAlert={setAlert}
+        />
+      )}
     </>
   );
 };

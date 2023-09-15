@@ -2,7 +2,8 @@ import stl from "./menustyle.module.scss";
 import Cards from "./cards/cards";
 import Link from "next/link";
 import Others from "./othersModal/others";
-
+import { useState } from "react";
+import AlertModal from "../alert/alertModal";
 const Menu = () => {
   let linksList = [
     {
@@ -38,6 +39,7 @@ const Menu = () => {
       href: "/",
     },
   ];
+  const [alert, setAlert] = useState(false);
   return (
     <section className={stl.menu}>
       <div className={stl.cont}>
@@ -53,8 +55,8 @@ const Menu = () => {
             </li>
           </ul>
         </div>
-
-        <Cards />
+        {alert && <AlertModal status={"add"} setAlert={setAlert} />}
+        <Cards setAlert={setAlert} />
       </div>
     </section>
   );

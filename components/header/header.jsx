@@ -6,7 +6,7 @@ import stl from "./headerstyle.module.scss";
 import Selector from "./selector/selector";
 import { CartIcon } from "../icons";
 import { useSelector } from "react-redux";
-
+import { ProfileImg } from "../icons/profile";
 const Header = () => {
   const totalPurchase = useSelector((store) => store.cart.products);
 
@@ -22,13 +22,13 @@ const Header = () => {
               <Link href="/">Меню</Link>
             </li>
             <li className={stl.listItem}>
-              <Link href="/branches">Филиалы</Link>
+              <Link href="/">Филиалы</Link>
             </li>
             <li className={stl.listItem}>
-              <Link href="/about">О нас</Link>
+              <Link href="/">О нас</Link>
             </li>
             <li className={stl.listItem}>
-              <Link href="/contacts">Контакты</Link>
+              <Link href="/">Контакты</Link>
             </li>
           </ul>
         </nav>
@@ -52,7 +52,9 @@ const Header = () => {
 
             <Selector />
             <button className={stl.enterBtn}>
-              <Link href="/">Войти</Link>
+              <Link href="/profile">
+                <ProfileImg />
+              </Link>
             </button>
           </div>
         </div>
